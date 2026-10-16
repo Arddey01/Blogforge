@@ -1,0 +1,22 @@
+{% extends "base.html" %}
+
+{% block title %}About{% endblock %}
+
+{% block content %}
+<article class="content-section">
+  <h1>About BlogForge</h1>
+
+  <p>BlogForge is a social blogging platform where anyone can share their ideas, stories, and experiences with a community of readers. Whether you're writing about travel, technology, food, or everyday life, BlogForge gives you a simple place to publish and be heard.</p>
+
+  <h2>What you can do here</h2>
+  <p>Create posts with a title and content, update or delete your own work, and browse what others are writing. Each author has a profile page where you can see all of their posts in one place.</p>
+
+  <h2>Our community</h2>
+  <p>BlogForge is built for conversation. We believe good writing starts discussions, and we want every voice to feel welcome. Be curious, be respectful, and share what you know.</p>
+
+  <h2>Our mission</h2>
+  <p>We want writing to be easy and enjoyable for everyone, from first-time bloggers to seasoned storytellers. BlogForge keeps the focus on the words and the people behind them.</p>
+
+  <p>Have a story to tell? <a href="{{ url_for('posts.new_post') }}">Write your first post</a> or <a href="{{ url_for('users.register') }}">join the community</a> today.</p>
+</article>
+{% endblock %}

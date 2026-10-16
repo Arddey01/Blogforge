@@ -1,0 +1,41 @@
+{% extends "base.html" %}
+ 
+
+{% block content %}
+<form method="POST" action="">
+  {{ form.hidden_tag() }}
+  <fieldset class="form-group">
+    <legend class="border-bottom" >updates </legend>
+      <div class="form_group">
+        {{ form.title.label(class="form-label") }}
+        {% if form.title.errors %}
+              {{ form.title(class="form-control form-control-lg is-invalid") }}
+         <div class="invalid-feedback">
+              {% for error in form.title.errors %}
+                  <span>{{ error }}</span>
+              {% endfor %}
+         </div>
+         {% else %}
+               {{ form.title(class="form-control form-control-lg")}}
+         {% endif %}
+      </div>
+      <div class="form_group">
+        {{ form.content.label(class="form-label") }}
+         {% if form.content.errors %}
+              {{ form.content(class="form-control form-control-lg is-invalid") }}
+         <div class="invalid-feedback">
+              {% for error in form.content.errors %}
+                  <span>{{ error }}</span>
+              {% endfor %}
+         </div>
+         {% else %}
+               {{ form.content(class="form-control form-control-lg")}}
+         {% endif %}
+      </div>
+      
+  </fieldset>
+    <div class="form_group">
+        {{ form.submit(class="btn btn-outline-info") }}
+      </div>
+</form>
+{% endblock %}
